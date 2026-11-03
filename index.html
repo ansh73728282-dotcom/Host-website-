@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101827"><title>ANSH TG HOST</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-icon">➤</span><div><b>ANSH TG HOST</b><small>BOT CONTROL PANEL</small></div></div>
+    <div class="nav-label">WORKSPACE</div>
+    <a class="nav active" href="#dashboard">▦ &nbsp; Dashboard</a>
+    <a class="nav" href="#mybots">🤖 &nbsp; My Bots</a>
+    <a class="nav" href="#upload">＋ &nbsp; Upload Bot</a>
+    <div class="nav-label">ACCOUNT</div>
+    <a class="nav" href="#settings">⚙ &nbsp; Settings</a>
+    <div class="sidebar-bottom"><span class="dot"></span> Hosting panel preview <small>Vercel frontend</small></div>
+  </aside>
+  <main>
+    <header><div><span class="eyebrow">WELCOME BACK</span><h1>Dashboard</h1><p>Manage your Telegram bots from one place.</p></div><div class="user-chip"><span class="avatar">A</span><span>Admin<br><small>Demo account</small></span></div></header>
+    <section class="notice"><b>ℹ Setup preview</b><span>This is the Vercel website interface. Bot execution needs a separate secure worker service.</span></section>
+    <section class="stats">
+      <article class="stat"><span>Total bots</span><strong id="total">0</strong><small>Uploaded in this browser demo</small></article>
+      <article class="stat"><span>Running</span><strong class="green" id="running">0</strong><small>Worker connection not configured</small></article>
+      <article class="stat"><span>Stopped</span><strong id="stopped">0</strong><small>Ready for deployment</small></article>
+    </section>
+    <section class="panel" id="upload">
+      <div class="panel-head"><div><h2>Upload a Python bot</h2><p>Add your bot file to the hosting queue.</p></div><span class="tag">.PY FILE</span></div>
+      <label class="dropzone" for="botfile"><span class="upload-icon">↑</span><b>Choose your Python file</b><span>Tap to select a .py file from your device</span><input id="botfile" type="file" accept=".py"></label>
+      <div class="form-row"><label for="botname">Bot name</label><input id="botname" placeholder="e.g. My Telegram Bot"></div>
+      <div class="form-row"><label for="token">Telegram bot token</label><input id="token" type="password" placeholder="Enter token only when secure backend is connected"><small>Never share your bot token with anyone. This demo does not upload or store it.</small></div>
+      <button id="addbot" class="primary">Add to demo list <span>→</span></button>
+      <p id="message" class="message" aria-live="polite"></p>
+    </section>
+    <section class="panel" id="mybots">
+      <div class="panel-head"><div><h2>My Bots</h2><p>Your bot projects will appear here.</p></div><span class="count" id="count">0 bots</span></div>
+      <div id="botlist" class="empty"><div class="empty-icon">🤖</div><b>No bots added yet</b><span>Choose a Python file above to add a demo entry.</span></div>
+    </section>
+    <footer>© 2026 ANSH TG HOST <span>Secure hosting requires an isolated worker backend.</span></footer>
+  </main>
+</div>
+<script src="/app.js"></script>
+</body></html>
